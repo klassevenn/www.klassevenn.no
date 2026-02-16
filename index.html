@@ -94,11 +94,26 @@
     </div>
   </section>
 
+  <!-- Kontakt -->
+  <section class="contact" id="kontakt">
+    <div class="container">
+      <h2 class="section-title fade-in">Kontakt oss</h2>
+      <p class="contact-text fade-in">
+        Har du spørsmål, tilbakemeldinger eller trenger hjelp? Ta gjerne kontakt med oss!
+      </p>
+      <p class="contact-email fade-in" id="kv-contact"></p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p class="footer-tagline">Enkelt for barnet. Trygt for deg.</p>
-      <a href="personvern.html" class="footer-link">Personvern</a>
+      <div class="footer-links">
+        <a href="personvern.html" class="footer-link">Personvern</a>
+        <span class="footer-divider">·</span>
+        <a href="#" class="footer-link" id="kv-em"></a>
+      </div>
       <div class="footer-brand">
         <img src="assets/klassevenn-icon.png" alt="Klassevenn" class="footer-icon">
         <span>&copy; 2026 Klassevenn</span>
@@ -132,6 +147,21 @@
     });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Contact email (assembled at runtime to deter scraping)
+    (function(){
+      var a='hei',b='klassevenn.no',addr=a+'@'+b;
+      var em=document.getElementById('kv-em');
+      if(em){em.href='mailto:'+addr;em.textContent=addr;}
+      var ct=document.getElementById('kv-contact');
+      if(ct){
+        var link=document.createElement('a');
+        link.href='mailto:'+addr;
+        link.textContent=addr;
+        link.className='contact-link';
+        ct.appendChild(link);
+      }
+    })();
   </script>
 
 </body>

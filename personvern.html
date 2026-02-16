@@ -110,13 +110,22 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-tagline">Enkelt for barnet. Trygt for deg.</p>
-      <a href="personvern.html" class="footer-link">Personvern</a>
+      <div class="footer-links">
+        <a href="personvern.html" class="footer-link">Personvern</a>
+        <span class="footer-divider">·</span>
+        <a href="#" class="footer-link" id="kv-em"></a>
+      </div>
       <div class="footer-brand">
         <img src="assets/klassevenn-icon.png" alt="Klassevenn" class="footer-icon">
         <span>&copy; 2026 Klassevenn</span>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Contact email (assembled at runtime to deter scraping)
+    (function(){var a='hei',b='klassevenn.no',e=document.getElementById('kv-em');if(e){e.href='mailto:'+a+'@'+b;e.textContent=a+'@'+b;}})();
+  </script>
 
 </body>
 </html>
