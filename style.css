@@ -474,6 +474,10 @@ img {
     align-items: center;
   }
 
+  .hero-owl-logo {
+    margin-left: 0;
+  }
+
   .hero-subtitle {
     max-width: 100%;
   }
@@ -516,6 +520,10 @@ img {
 
   .phone-frame img {
     width: 220px;
+  }
+
+  .phone-frame-lg img {
+    width: 90vw;
   }
 
   .contact {
