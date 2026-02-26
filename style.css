@@ -301,14 +301,6 @@ img {
   text-align: center;
 }
 
-.footer-tagline {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-bottom: 20px;
-}
-
 .footer-links {
   margin-bottom: 16px;
 }
