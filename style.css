@@ -92,7 +92,7 @@ img {
   gap: 60px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 120px 24px 80px;
+  padding: 24px;
 }
 
 .hero-copy {
@@ -131,7 +131,7 @@ img {
 .cta-button {
   display: inline-block;
   align-self: center;
-  margin-top: 8px;
+  margin-top: 50px;
   padding: 16px 40px;
   background: var(--color-btn);
   color: #fff;
@@ -214,6 +214,11 @@ img {
 .phone-frame img {
   width: 260px;
   filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.12));
+}
+
+.phone-frame-lg img {
+  width: 340px;
+  border-radius: 16px;
 }
 
 .feature-copy {
@@ -362,9 +367,18 @@ img {
   max-width: 720px;
 }
 
+.policy-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
 .policy-page h1 {
-  font-family: var(--font-display);
-  font-size: 2rem;
+  font-family: var(--font-logo);
+  font-size: 3rem;
   font-weight: 700;
   color: var(--color-heading);
   margin-bottom: 8px;
@@ -377,8 +391,8 @@ img {
 }
 
 .policy-page h2 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-family: var(--font-logo);
+  font-size: 2rem;
   font-weight: 700;
   color: var(--color-heading);
   margin-top: 36px;
@@ -404,6 +418,46 @@ img {
 
 .policy-page a {
   color: var(--color-link);
+}
+
+.policy-page details {
+  border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+  padding-bottom: 8px;
+}
+
+.policy-page summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.policy-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.policy-page summary::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232E5E3E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
+}
+
+.policy-page details[open] > summary::before {
+  transform: rotate(90deg);
+  background-color: var(--color-heading);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+}
+
+.policy-page summary h2 {
+  margin-top: 0;
 }
 
 /* ===== Responsive ===== */
